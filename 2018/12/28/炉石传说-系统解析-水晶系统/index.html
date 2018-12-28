@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="炉石传说,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="炉石传说-系统解析-水晶系统　　回合制游戏，通常包含两个最基础的系统，一个是资源系统，另一个是行动力系统。行动力也是一种资源。资源系统控制回合内所有游戏元素能动性的强度，行动力系统控制回合内所有游戏元素能动性的频率。能动性指所有游戏元素的动作行为。 　　《炉石传说》的水晶系统是行动力系统与资源系统的复合系统。">
+<meta name="keywords" content="炉石传说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="炉石传说-系统解析-水晶系统">
+<meta property="og:url" content="http://lvxupeng/lvxupeng.github.io/2018/12/28/炉石传说-系统解析-水晶系统/index.html">
+<meta property="og:site_name" content="游戏猪">
+<meta property="og:description" content="炉石传说-系统解析-水晶系统　　回合制游戏，通常包含两个最基础的系统，一个是资源系统，另一个是行动力系统。行动力也是一种资源。资源系统控制回合内所有游戏元素能动性的强度，行动力系统控制回合内所有游戏元素能动性的频率。能动性指所有游戏元素的动作行为。 　　《炉石传说》的水晶系统是行动力系统与资源系统的复合系统。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-28T15:12:30.713Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="炉石传说-系统解析-水晶系统">
+<meta name="twitter:description" content="炉石传说-系统解析-水晶系统　　回合制游戏，通常包含两个最基础的系统，一个是资源系统，另一个是行动力系统。行动力也是一种资源。资源系统控制回合内所有游戏元素能动性的强度，行动力系统控制回合内所有游戏元素能动性的频率。能动性指所有游戏元素的动作行为。 　　《炉石传说》的水晶系统是行动力系统与资源系统的复合系统。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"remove","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://lvxupeng/lvxupeng.github.io/2018/12/28/炉石传说-系统解析-水晶系统/">
+
+
+
+
+
+  <title>炉石传说-系统解析-水晶系统 | 游戏猪</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">游戏猪</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Game Design</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvxupeng/lvxupeng.github.io/2018/12/28/炉石传说-系统解析-水晶系统/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="游戏猪">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="游戏猪">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">炉石传说-系统解析-水晶系统</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-28T22:46:27+08:00">
+                2018-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/炉石传说-系统解析/" itemprop="url" rel="index">
+                    <span itemprop="name">炉石传说-系统解析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="炉石传说-系统解析-水晶系统"><a href="#炉石传说-系统解析-水晶系统" class="headerlink" title="炉石传说-系统解析-水晶系统"></a>炉石传说-系统解析-水晶系统</h1><p>　　回合制游戏，通常包含两个最基础的系统，一个是资源系统，另一个是行动力系统。行动力也是一种资源。资源系统控制回合内所有游戏元素能动性的强度，行动力系统控制回合内所有游戏元素能动性的频率。能动性指所有游戏元素的动作行为。</p>
+<p>　　《炉石传说》的水晶系统是行动力系统与资源系统的复合系统。<br><a id="more"></a></p>
+<p>　　在设计师构建的系统框架里，若卡牌数值处于其正常范围，水晶系统是可以代替行使行动力系统与资源系统的功能的，并且可以在一定程度上对这两个系统进行简化，使游戏更加简单。但是，若卡牌数值不处于其正常范围，此时水晶系统往往就容易暴露出缺陷，无法继续准确有效的代替行使行动力系统与资源系统的功能。玩家可以通过一些卡牌组合来修改部分关键牌的数值以使卡牌数值不处于其正常范围，从而暴露出水晶系统的缺陷，并利用这种缺陷为自己带来优势乃至胜利。</p>
+<h2 id="行动力系统"><a href="#行动力系统" class="headerlink" title="行动力系统"></a>行动力系统</h2><p>　　行动力系统控制回合内所有游戏元素能动性的频率。</p>
+<p>　　在《炉石传说》中，游戏元素具体指随从的攻击、英雄的攻击、卡牌的使用、召唤随从等规则、行为、事件。而游戏元素能动性的频率具体指随从的攻击次数、英雄的攻击次数、卡牌的使用张数、召唤的随从数量等行为、事件的频率。</p>
+<p>　　比如默认情况下，随从一般只能攻击一次，特殊情况下，除非满足某种条件，否则英雄或者随从无法进行攻击或者也可以进行多次攻击。攻击次数就是能动性频率的一种。</p>
+<p>　　《炉石传说》随从数量上限虽然是七个，但是在一般的对战场景中，是很难始终保持随从数量稳定在七个的，即使在某个回合瞬间使控制的随从数量达到七的上限，但是往往不能持久，更多的时候，玩家控制的随从数量一般在一到四个左右进行波动。这就意味着玩家在一场对局中，绝大多数时候攻击频率一般稳定在一到四次之间。</p>
+<p>　　前面已经说明行动力系统也是资源系统的一种，而攻击频率是行动力系统的一部分，因此，攻击频率也是一种资源，并且使用这种资源是有代价的。这一点，可以从《炉石传说》两种卡牌机制中得到验证。</p>
+<p>　　第一种机制就是特效：风怒（攻击频率为两次)。</p>
+<p>　　相同费用相同强度的卡牌，具备风怒的随从往往在身材上更弱。如7费4-8的风暴看守（特效：风怒），比7费5-9俘获的冰虫身材更亏。</p>
+<p>　　相同身材相同强度的卡牌，具备风怒的随从费用往往更高。如3费2-3的萨尔玛先知（特效：风怒），比2费3-2的淤泥践踏者费用更高。</p>
+<p>　　第二种机制就是特效：无法攻击（攻击频率为零次）。</p>
+<p>　　相同身材相同强度的卡牌，具备无法攻击特效的随从费用更低。如2费4-5的上古看守者（特效：无法攻击）。仅从随从身材价值模型来看，4费随从身材一般为4-5或者5-4，比如4费的冰风雪人。这里要说明一下，上古看守者是稀有卡，冰风雪人是基本卡，二者强度不一样。不过有一张稀有卡可以作个中间对比，稀有随从卡2费3-3的藏宝海湾荷官（战吼：使你的对手获得一个幸运币）。2费随从的身材价值模型一般为2-3或者3-2再附带正面特效，而这里2费3-3身材的随从带有负面特效，很明显，2费3-3的身材是溢价的，所以有惩罚（使你的对手获得一个幸运币）。2费4-5上古看守者的身材明显好于2费3-3，所以可以得出无法攻击的特效是一种惩罚。</p>
+<p>　　相同费用相同强度的卡牌，具备无法攻击特效的随从身材更好。如3费4-8的巨齿刀叶(特效：无法攻击）。仅从随从身材价值模型来看，3费随从的身材一般为3-4或者4-3，而3费4-4的奥术傀儡（战吼：使你的对手获得一个法力水晶）带有惩罚特效，巨齿刀叶的身材要明显好于奥术傀儡，因此，可以得出无法攻击也是一种惩罚，而为了弥补这种惩罚，于是在身材方面作出了补偿。</p>
+<p>　　（简略说明一下：这里卡牌的强度以卡牌的稀有度为标准，稀有度相同的卡牌即强度相同。但是在实际情况中，并非总是如此，会有特例。但是绝大多数情况下，卡牌强度与卡牌稀有度是存在强相关性的。因此，这里以卡牌稀有度为标准来界定每个卡牌的强度。）</p>
+<p>　　因此，攻击频率是一种资源，并且使用这种资源是有代价的。既然攻击频率是资源，那么就可以拿来用，至于如何用，则取决于各自的组卡思路。</p>
+<p>　　在《炉石传说》中，场上的随从不管其身材属性如何，只要其依然具备攻击能力，那么就是在提供攻击频率资源。</p>
+<p>　　比如，三个冲锋树人加咆哮，其使用的方式就是利用多个攻击频率从而使得咆哮获得更高的溢价，如果咆哮仅仅只是作用于一个攻击频率，其实创造的价值并不高。同理，多数量的随从配合嗜血术，也是在利用攻击频率资源。</p>
+<p>　　比如，场上四个巫师学徒加上安东尼大法师，只要有一张可以使用的法术卡，那么就可以启动无限火球术。如果说前面的攻击频率和咆哮、嗜血术的配合还在系统正常的数值范围内操作运行，那么，无限火球术基本上就已经是在利用水晶系统的缺陷了。正常数值的火球术是依然可以在系统数值框架内正常操作运行的，但是通过四个巫师学徒将火球术的水晶费用修改到0费，使其数值不再处于正常的数值范围内，那么就可以完完全全的暴露出水晶系统的缺陷。</p>
+<p>　　因为《炉石传说》中可以修改卡牌数值的方法手段很多，因此，水晶系统的缺陷经常会有微弱的暴露，只是这些微弱的暴露从卡牌的机制上来看，是被完全看作卡牌正常的效果，并且处于数据交互可正常运行的范围之内。一个巫师学徒只能使火球术减少1费，水晶系统的缺陷暴露并不是很严重，而且由于巫师学徒本身的作用就是减少法术的水晶消耗，因此，火球术减少1费会被觉得理所当然；如果场上有两个巫师学徒，水晶系统的缺陷暴露就变得严重了；如果是三个，那就已经很严重了；如果是四个，则水晶系统的缺陷就完完全全的暴露了，因为0费的火球术已经突破了行动力系统的限制，即使用火球术不再消耗任何行动力。此时，水晶系统的规则限制已经失效，水晶系统瘫痪。</p>
+<p>　　要想使水晶系统瘫痪，其操作成本相当高、难度相当大，而这也是水晶系统在大部分情况下可以正常代替行使行动力系统的原因。微弱的暴露出水晶系统的缺陷，操作成本并不是很高。若想进一步暴露出水晶系统的缺陷，一般情况下，操作成本会增加，若想完完全全的暴露出水晶系统的缺陷，则其操作成本会极大的增加，因此，难度也会得到迅速提升，但并不是不可能。这其中涉及到组卡思路、出牌技巧等各项因素，而能处理好这些因素的玩家才有完全利用水晶系统缺陷的可能。</p>
+<p>　　在《炉石传说》中，由于行动力系统被简化成了水晶系统，而为了配合这种简化，《炉石传说》中所有单位的默认攻击频率全部设定为一次，且攻击时不消耗任何资源。这种设定与水晶系统相配合是可以使卡牌数据交互在既定系统框架内正常运行的，只要这种设定能够贯穿整个系统。然而实际情况下，使用攻击频率资源是有代价的，这一条对所有单位都适用。由于对所有单位都适用，因此，这是一条基础线。而为了使游戏简化更加易上手，于是就把这条基础线给去除了，去除以后，只要所有单位依然遵从以上设定，那么去除这样一条基础线是可行的。</p>
+<p>　　这就好比赛车测速，假设这里有1000辆赛车等待测速，需要耗费很长时间（游戏系统复杂）。测速员发现有部分型号的赛车跑100米花费的时间全都是一模一样的（基础线），为了省时间省事（为了简化），于是测速员决定这些赛车统统都从100米开始跑（去除基础线），不必与其它赛车一样都从起跑线开始跑，只要在最终的成绩中扣除跑100米花费的时间即可（攻击频率代价）。因为这些型号的赛车都扣除了跑100米花费的时间，于是，简化测速过程的赛车在这个默认的规则设定下，其测速依然是有效的（水晶系统可以代替行使行动力系统）。（不要纠结以上设定在现实世界中的合理性，这只是个用来简化理解的例子而已）</p>
+<p>　　《炉石传说》中的行动力系统简化设定与这是一个道理。</p>
+<p>　　但是，贡克，迅猛龙之神（以下简称贡克）这张卡的出现，具备了打破这种为了配合行动力系统简化而默认的系统设定的能力。贡克在某些条件的配合下，可以极大的提高英雄的攻击频率。由于《炉石传说》简化后的行动力系统使得攻击频率不再消耗任何行动力资源，于是所有攻击频率高于一次的攻击行为都将获得更多的收益。而贡克每使英雄攻击频率提升一次，就会使水晶系统的缺陷暴露一点，水晶系统的缺陷每暴露一点，就会额外获得一份收益。只要获得的攻击频率足够高，那么水晶系统的缺陷终究会被完完全全暴露，最终突破行动力系统规则的限制。此时，水晶系统的规则限制已经失效，水晶系统瘫痪。一旦可以突破行动力系统规则的限制，那么就具备获得无限收益的可能。这里之所以用“可能”两个字，是因为要想暴露水晶系统的缺陷，是有操作成本的，如果操作成本远大于所产生的收益，那么这就不是一条可行的方法。</p>
+<p>　　攻击频率只是众多游戏元素能动性频率中的一种。而《炉石传说》中还有其它很多种类型的能动性频率。无论是哪一种能动性频率，只有当其能动性频率处于合理的范围内时，水晶系统才可以正常代替行使行动力系统的功能。</p>
+<h2 id="资源系统"><a href="#资源系统" class="headerlink" title="资源系统"></a>资源系统</h2><p>　　资源系统控制回合内所有游戏元素能动性的强度。</p>
+<p>　　每一个游戏元素的强度级别都有与其资源消耗相对应的价值模型曲线。即消耗多少资源，能打出多大强度的效果，这个是可以预期的，虽然可能存在一定范围的波动，但是基本都不会明显偏离其资源价值模型曲线。</p>
+<p>　　《炉石传说》的水晶系统在一定程度上代替行使了资源系统的功能。</p>
+<p>　　《炉石传说》同样有其资源价值模型曲线。</p>
+<p>　　在《炉石传说》中，卡牌价值模型曲线主要有两个影响因素：卡牌稀有度与卡牌水晶消耗。</p>
+<p>　　一般的，卡牌稀有度越高，卡牌强度越大；卡牌水晶消耗越多，卡牌强度越大。</p>
+<p>　　这里需要说明一下：<br>　　以上所说的卡牌强度不单单指卡牌数值上的强度，还包括卡牌机制上的强度。卡牌稀有度相同不代表卡牌强度也相同，甚至有些时候稀有度相同的卡牌其强度也很难比较出来。这类卡牌的价值往往体现在其卡牌机制，而卡牌机制是个很难比较的东西，你很难说明究竟是尤格萨隆的卡牌机制强一些，还是恩佐斯的卡牌机制强一些，仅仅只是选择的不同而已。部分卡牌因为其机制不同很难一较高下。</p>
+<p>　　由于卡牌机制的强度极难把握，因此，卡牌设计师在这一块很容易就把轮子给玩脱了。如海盗帕奇斯被削、尤格萨隆被削都是因为其实际强度与设计强度预期不符。虽然卡牌机制强度很难比较，但是通过卡牌机制获得的收益与操作成本是可以比较的，通过收益与操作成本的比较，就可以得出游戏元素相同、类似的卡牌的强度级别。</p>
+<p>　　在《炉石传说》中，有很多通用的基础游戏元素，如抽牌、随从召唤、卡牌水晶消耗等等，而这些通用的基础游戏元素是有其资源价值模型曲线的。不同的卡牌视其具体情况可能会有些不同，但是基本不会明显偏离其自身的资源价值模型曲线。</p>
+<p>　　单单从随从身材属性的资源价值模型曲线来看，若随从的水晶消耗为X，则其身材属性之和一般为2X+1。1费1-2、2-1，2费0-5、1-4、2-3、3-2、4-1，3费1-6、2-5、3-4、4-3、5-2等等。</p>
+<p>　　单单从法术伤害的资源价值模型曲线来看，若法术的水晶消耗为X，则其伤害总量之和一般为X+1。0费1点伤害，1费2点伤害，2费3点伤害，3费4点伤害等等。</p>
+<p>　　这里只是列举了两个例子，当然还有很多其它游戏元素的资源价值模型曲线。也就是说，在《炉石传说》中，绝大多数游戏元素的资源消耗与其价值模型曲线是有大致范围的对应关系的，并不是毫无规律。既然是有规律的，那么卡牌的资源消耗与其强度效果就是可预期的、可比较的。</p>
+<p>　　在《炉石传说》中，有一类卡的强度效果波动特别大，这类卡一般带有成长特性、任务特性、累加特性。</p>
+<p>　　成长特性的卡牌：青玉护符、单足跳跳兔。<br>　　任务特性的卡牌：探索地下洞穴、虚空传送门。<br>　　累加特性的卡牌：奥术巨人、西瓦尔拉，猛虎之神。</p>
+<p>　　对于成长特性的卡牌，其卡牌强度往往随着使用次数的增加而增加。其资源消耗固定，因此卡牌每使用一次，其强度便增加一分。</p>
+<p>　　对于任务特性的卡牌：探索地下洞穴，完成任务以后，每使用一张得到任务强化效果的卡牌，收益便增加一分；虚空传送门，完成任务以后，每经过一个回合，收益便增加一分。<br>　　对于累加特性的卡牌：其卡牌强度不变，每达成一个条件，其资源消耗便减少一次，因此卡牌价值便增加一分，卡牌强度也变相的增加了。</p>
+<p>　　从以上这些具有不同特性的卡牌机制来看，其卡牌收益与其资源消耗并没有一个固定的价值模型曲线，而是随着具体的使用情况而变化的。每一种情况的不同，其卡牌的收益也不同。尽管如此，但是依然有方法衡量其强度。每一种不同特性的卡牌都有其自身的使用环境，而达成其使用环境后，这些卡牌才会根据具体的情况产生具体的收益。如果达成其使用环境的操作成本与其产生的具体收益的对比发生变化 ，那么，这些不同特性的卡牌的具体使用效果强度也会发生变化。</p>
+<p>　　比如，弑君贼的吸血药膏被削弱，其目的就是为了削弱弑君等卡组的强度（其实问题的根源来自于弑君本身）。虽然弑君本身并未发生变化，但是达成其收益的使用环境的操作成本增加了，于是变相的，其收益就减少了。最终，通过提高操作成本的方法来达到削弱弑君本身的目的。在《炉石传说》的版本交替期间，很多卡牌本身并未发生变化，只是因其所处的版本环境发生了变化，于是其强度发生了变化。</p>
+<p>　　所有游离于标准价值模型曲线之外的卡牌，其都有特定的使用环境与使用要求。这类卡牌随着版本环境的变化，其强度会发生剧烈的变化，多数时候，这些非标准价值模型的卡牌一旦脱离其使用环境或者未达到其使用要求，基本上毫无用处。由于天生带有这种特性，所以此类卡牌一般只能进入特定类型的卡组构筑。只能使其它标准价值卡牌去配合它们，而它们则很难进入其它的卡组构筑，去配合其它标准价值卡牌。</p>
+<p>　　之所以如此设定，是因为所有游离于标准价值模型曲线的卡牌，如果能够随意的进入任意一种卡组构筑，与其它标准价值卡牌相配合，那么，其强度很难得到稳定的保证，很可能出现十分IMBA破坏游戏平衡的现象，因此为了避免此种情况的发生，这类卡牌天生就带有自闭的特性，即无法脱离其特定的使用环境。</p>
+<p>　　所有符合资源价值模型曲线的卡牌，往往是可以通用的卡牌，这类卡牌构成了《炉石传说》的基本盘。基本盘建立起来以后，再设计一些不符合资源价值模型曲线的卡牌。这些卡牌的强度往往高于其它同类型的通用卡牌，或者这些卡牌可以极大的降低操作成本从而获得其它通用卡牌需要使用更多操作成本才能获得的相同收益。然后给它们打上特殊的印记符号，于是，这些卡牌就成了史诗、传说。</p>
+<p>　　随着版本的更新，卡牌变得越来越多，而为了提高新版本卡牌在现存卡牌中的竞争力，于是就需要把新版本卡牌的强度稍微加强一点点。如果新版本卡牌的竞争力比现存已有的卡牌的竞争力低，玩家没有理由去更新自己的卡组，自然也就没有动力去购买新版本卡包。</p>
+<p>　　如果玩家始终守着一些版本早期的旧卡不愿意更换出新卡，那基本上只有一个解释：这些旧卡的竞争力极强。一旦这些旧卡挡住新版本卡包的销量，要么进荣誉室，要么被削。难逃其一。女王、炎魔之王莫不如是。</p>
+<p>　　每个新出版本的卡牌强度加强一点点，随着版本的增多，整个牌库卡牌的整体强度都在缓慢的提升。构成游戏初期基本盘的通用卡牌的竞争力在缓慢变弱，部分早期版本通用卡牌渐渐的退出了卡组构筑，更强的通用卡牌构成了游戏当前新的基本盘。所以，在游戏早期版本，好一点的卡组也就带一到两张橙卡。但是在当前版本，一个卡组带三四张橙卡如同家常便饭。这也就是为什么大家都说《炉石传说》变得越来越贵的原因。</p>
+<p>　　资源系统最根本的作用就是控制回合内游戏元素的能动性强度。</p>
+<p>　　随着牌库整体卡牌强度的缓慢提升，消耗相同资源的情况下，卡牌的强度效果也在缓慢提升。这会提升回合内能动性强度的上限，而回合内的局势突变也会更加猛烈。这一切变化的结果就是OTK卡组出现的可能性更高，快攻卡组斩杀英雄所需要的平均回合数会变得更少。</p>
+<p>　　符合资源价值模型曲线的卡牌构成了《炉石传说》的基本盘，而对于游离于资源价值模型曲线之外的卡牌，水晶系统代替行使资源系统功能的能力在这些卡牌面前常常失效。</p>
+<h2 id="水晶系统"><a href="#水晶系统" class="headerlink" title="水晶系统"></a>水晶系统</h2><p>　　《炉石传说》的水晶系统是行动力系统与资源系统的复合系统。</p>
+<p>　　如果把《炉石传说》中的各类卡牌机制、职业特色等比喻为繁华的上层建筑，那么行动力系统与资源系统就是所有上层建筑的地基。只要地基不出问题，无论上层建筑怎么折腾，整个系统框架都不会出现大问题。因此，任何对这两个系统有着深刻理解的设计师，是绝对不会打这两块地基的主意的。因为一旦这两个地基般的系统出问题，那么绝对会引发系统框架层面上的大规模崩塌。系统崩塌最直接的后果就是水晶系统失效、瘫痪。</p>
+<p>　　大家一直说德鲁伊可以为所欲为，其根本问题并不在于卡牌强度本身，而在于其职业特色-跳费的立足点就是建立在挖地基的基础上。所以，德鲁伊的职业特色从其建立的那一刻起，就已经为后续的问题埋下了根源。跳费是在挖行动力系统的地基，而青玉机制则是在挖资源系统的地基。两个地基同时被挖真的是十分难得。这直接导致青玉德过于IMBA（依然有卡组可以克制青玉德）。所以”GTMD青玉德“就是玩家对这两个地基被挖最直接的愤怒反应。如果仅仅只是跳费并不能造成很大的问题，只是德鲁伊有了跳费的基础后，配合其它卡牌机制更容易出问题。所以相比其它职业，德鲁伊的专属职业卡牌机制在设计时需要更加谨慎。因为一个不小心，就可能设计出一个“GTMD XX德”。</p>
+<p>　　凡是打系统力系统与资源系统主意而设计出的卡牌机制，最终都会出问题。无限火球法的问题在于巫师学徒，结果把冰箱给送进了荣誉室；弑君的问题在于弑君本身，结果把吸血药膏给削了；任务贼的问题在于任务机制，后来把任务削了，这个还算是削到了关键；奴隶战的问题在于奴隶主的无限复制，结果把战歌指挥官给削了，后面新出的术士的亵渎配合奴隶主，历史遗留的无限机制问题又出来了。奇数骑的问题在于英雄技能强化，结果把等级提升给削了（等级提升本身也是极易出现使用价值溢价的卡），这样削基本上骑士以后永远也别想拿到奇数水晶消耗的群体BUFF卡了，只要出这样的卡，历史遗留问题就会再次重现。类似这种拆东墙补西墙的平衡修改方式，《炉石传说》里面简直不要太多。之所以会出这么多乱子，就在于设计师动了这两个地基般的系统。</p>
+<p>　　滋养、成长同时被削就是因为设计师已经意识到了问题的关键出在哪里。事实上，在设计《炉石传说》的跳费机制时，设计师应该是完全没有意识到这种机制会引发出后面一系列的问题的。只是随着卡池的扩大，问题暴露得越来越明显，才终于发现问题出在了哪里。现在的新版本已经完全不出冲锋随从了，冲锋机制就是一个典型的设计失误。随着卡池的扩大，冲锋是一个强度越来越难以把握的机制，更是OTK卡组、快攻卡组的温床（冲锋树人加咆哮、火车王冷血，火车王力代，火车王无面，肉块加末日守卫等等），并且会影响后续一系列卡牌的设计。后续版本，突袭随从应该会成为冲锋随从的替代品。（你知道设计师有多么想干掉小野猪么？）</p>
+<p>　　由于资源系统与行动力系统简化为水晶系统，因此，资源系统方面的正常操作行为通过水晶系统传递到行动力系统，往往会造成连带影响；反之亦然。卡牌的水晶消耗被影响，会同时影响到两个系统。资源系统与行动力系统任意一个系统数值上的变化，都会通过水晶系统对另一个系统造成连带影响。所以，在设计卡牌时，这也是个必须要避开的坑。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/炉石传说/" rel="tag"># 炉石传说</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/28/炉石传说-系统解析-体系系统/" rel="next" title="炉石传说-系统解析-体系系统">
+                <i class="fa fa-chevron-left"></i> 炉石传说-系统解析-体系系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">游戏猪</span>
+</div>
+
+
+<!-- <div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+-->
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
